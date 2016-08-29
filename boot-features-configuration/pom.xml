@@ -8,14 +8,12 @@
 		<artifactId>boot-features</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>boot-features-properties</artifactId>
-	<name>boot-features-properties</name>
+	<artifactId>boot-features-configuration</artifactId>
+	<name>boot-features-configuration</name>
 	<url>http://maven.apache.org</url>
-
 	<properties>
-		<start-class>io.training.boot.features.BootFeaturesPropertiesApplication</start-class>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
-
 	<dependencies>
 
 	</dependencies>

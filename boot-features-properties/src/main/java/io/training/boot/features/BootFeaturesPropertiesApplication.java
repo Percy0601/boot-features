@@ -4,9 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BootFeaturesApplication {
+public class BootFeaturesPropertiesApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BootFeaturesApplication.class, args);
+		SpringApplication.run(BootFeaturesPropertiesApplication.class, args);
+
 	}
 }
