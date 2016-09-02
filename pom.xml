@@ -47,5 +47,6 @@
 		<module>boot-features-properties</module>
 		<module>boot-features-simple</module>
 		<module>boot-features-configuration</module>
+		<module>boot-features-banner</module>
 	</modules>
 </project>
