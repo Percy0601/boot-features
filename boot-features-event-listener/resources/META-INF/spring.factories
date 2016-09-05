@@ -1,0 +1,4 @@
+org.springframework.context.ApplicationListener=\
+io.training.boot.features.event.listener.event.MyApplicationEnvironmentPreparedEvent,\
+io.training.boot.features.event.listener.event.MyApplicationPreparedEvent,\
+io.training.boot.features.event.listener.event.MyApplicationReadyEvent
