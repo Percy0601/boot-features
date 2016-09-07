@@ -73,5 +73,6 @@
 		<module>boot-features-error</module>
 		<module>boot-features-reload</module>
 		<module>boot-features-profile</module>
+		<module>boot-features-mybatis</module>
 	</modules>
 </project>
