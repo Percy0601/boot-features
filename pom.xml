@@ -72,5 +72,6 @@
 		<module>boot-features-event</module>
 		<module>boot-features-error</module>
 		<module>boot-features-reload</module>
+		<module>boot-features-profile</module>
 	</modules>
 </project>
