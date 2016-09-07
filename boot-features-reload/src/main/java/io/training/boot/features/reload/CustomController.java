@@ -11,7 +11,7 @@ public class CustomController {
 
 	@RequestMapping("/print")
 	public String print(String name) {
-		log.info("测试热加载======{}", name);
+		log.info("测试热加载###{}", name);
 		return "Helo: " + name;
 	}
 }
