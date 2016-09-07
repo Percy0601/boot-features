@@ -13,6 +13,7 @@
 	<url>http://maven.apache.org</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<start-class>io.training.boot.features.error.BootErrorResolverApplication</start-class>
 	</properties>
 	<dependencies>
 		<!-- 测试使用Undertow -->

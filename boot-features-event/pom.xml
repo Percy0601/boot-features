@@ -8,7 +8,7 @@
 		<artifactId>boot-features</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>boot-features-event-listener</artifactId>
+	<artifactId>boot-features-event</artifactId>
 	<name>boot-features-event-listener</name>
 	<url>http://maven.apache.org</url>
 	<properties>

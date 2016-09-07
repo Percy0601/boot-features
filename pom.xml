@@ -56,7 +56,7 @@
 		<module>boot-features-simple</module>
 		<module>boot-features-configuration</module>
 		<module>boot-features-banner</module>
-		<module>boot-features-event-listener</module>
+		<module>boot-features-event</module>
 		<module>boot-features-error</module>
 	</modules>
 </project>
