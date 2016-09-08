@@ -7,7 +7,7 @@
         <package name="io.training.boot.features.mybatis.domain"/>
     </typeAliases>
     <mappers>
-        <mapper resource="io/training/boot/features/mybatis/dao/CityMapper.xml"/>
+<!--         <mapper resource="io/training/boot/features/mybatis/dao/CityMapper.xml"/> -->
         <mapper resource="io/training/boot/features/mybatis/mapper/HotelMapper.xml"/>
     </mappers>
 </configuration>
