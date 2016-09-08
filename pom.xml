@@ -75,5 +75,7 @@
 		<module>boot-features-profile</module>
 		<module>boot-features-mybatis</module>
 		<module>boot-features-servlet</module>
+		<module>boot-features-validation</module>
+		<module>boot-features-jpa</module>
 	</modules>
 </project>
