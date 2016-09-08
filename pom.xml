@@ -74,5 +74,6 @@
 		<module>boot-features-reload</module>
 		<module>boot-features-profile</module>
 		<module>boot-features-mybatis</module>
+		<module>boot-features-servlet</module>
 	</modules>
 </project>
