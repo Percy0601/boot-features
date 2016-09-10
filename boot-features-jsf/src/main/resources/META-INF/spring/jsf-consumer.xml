@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jsf="http://jsf.jd.com/schema/jsf"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://jsf.jd.com/schema/jsf  http://jsf.jd.com/schema/jsf/jsf.xsd">
+
+	<!-- 注册中心 address="192.168.150.119:40660,192.168.150.121:40660" --><!--<jsf:registry id="jsfRegistry" index="i.jsf.jd.com" /> -->
+	<jsf:registry id="jsfRegistry" address="192.168.150.119:40660" /><!-- 
+		服务调用者配置 直连使用 url="jsf://127.0.0.1:22000;jsf://127.0.0.1:22001" -->
+<!-- 	<jsf:consumer id="userService" -->
+<!-- 		interface="io.log.extension.agent.demo.api.UserService" protocol="jsf" -->
+<!-- 		alias="CHANGE-IT" timeout="1000000" retries="0" url="jsf://127.0.0.1:22001" /> -->
+<!-- 	<jsf:consumer id="remoteService" interface="io.log.extension.api.RemoteService" -->
+<!-- 		protocol="jsf" alias="CHANGE-IT" timeout="1000000" retries="0" -->
+<!-- 		url="jsf://127.0.0.1:22000" /> -->
+</beans>

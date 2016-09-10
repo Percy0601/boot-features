@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>io.training</groupId>
+		<artifactId>boot-features</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>boot-features-jsf</artifactId>
+	<name>boot-features-jsf</name>
+	<url>http://maven.apache.org</url>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<start-class>io.training.boot.features.jsf.BootJsfApplication</start-class>
+	</properties>
+	<dependencies>
+
+		<dependency>
+			<groupId>io.netty</groupId>
+			<artifactId>netty-all</artifactId>
+			<version>4.0.24.Final</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.jd</groupId>
+			<artifactId>jsf</artifactId>
+			<version>1.5.5</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/src/main/resources/lib/jsf-1.5.5.jar</systemPath>
+		</dependency>
+
+	</dependencies>
+
+</project>

@@ -77,5 +77,6 @@
 		<module>boot-features-servlet</module>
 		<module>boot-features-validation</module>
 		<module>boot-features-jpa</module>
+		<module>boot-features-jsf</module>
 	</modules>
 </project>
