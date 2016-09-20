@@ -80,5 +80,6 @@
 		<module>boot-features-jsf</module>
 		<module>boot-features-test</module>
 		<module>boot-features-condition</module>
+		<module>boot-features-jersey</module>
 	</modules>
 </project>
