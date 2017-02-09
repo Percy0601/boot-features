@@ -21,4 +21,25 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 	</dependencies>
+
+	<profiles>
+		<profile>
+			<id>dev</id>
+			<activation>
+				<activeByDefault>false</activeByDefault>
+			</activation>
+			<properties>
+				<profileActive>dev</profileActive>
+			</properties>
+		</profile>
+		<profile>
+			<id>test</id>
+			<activation>
+				<activeByDefault>false</activeByDefault>
+			</activation>
+			<properties>
+				<profileActive>test</profileActive>
+			</properties>
+		</profile>
+	</profiles>
 </project>
