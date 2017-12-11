@@ -1,15 +1,18 @@
 package io.training.boot.features.validation.web;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.ObjectError;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
+import java.util.List;
 
 @Slf4j
-//@Validated
+@Validated
 @RestController
 public class ValidationGroupController {
 
@@ -28,8 +31,16 @@ public class ValidationGroupController {
      * @return
      */
     @GetMapping("/create")
-    public String validCreate(@Validated(value = CreateGroup.class) User user) {
+    public String validCreate(@Validated(value = CreateGroup.class) User user, BindingResult result) {
         log.info("验证自定义类：创建类");
+
+        if (result.hasErrors()) {
+            List<ObjectError> list = result.getAllErrors();
+            for (ObjectError error : list) {
+                log.info("{}---{}---{}", error.getCode(), error.getArguments(), error.getDefaultMessage());
+            }
+            return "验证出错";
+        }
         return "验证自定义类：创建类";
     }
 
