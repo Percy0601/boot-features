@@ -75,5 +75,6 @@
 		<module>boot-features-condition</module>
 		<module>boot-features-jersey</module>
         <module>boot-features-jackson</module>
-    </modules>
+		<module>boot-features-gorm</module>
+	</modules>
 </project>
