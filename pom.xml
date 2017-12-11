@@ -73,5 +73,6 @@
 		<module>boot-features-test</module>
 		<module>boot-features-condition</module>
 		<module>boot-features-jersey</module>
-	</modules>
+        <module>boot-features-jackson</module>
+    </modules>
 </project>
