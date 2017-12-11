@@ -1,6 +1,7 @@
 package io.training.boot.features.validation.web;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
 import org.springframework.validation.annotation.Validated;
@@ -15,6 +16,9 @@ import java.util.List;
 @Validated
 @RestController
 public class ValidationGroupController {
+
+    @Autowired
+    private ValidationService validationService;
 
     @GetMapping("/basic")
     public String validBasic(@NotNull(message = "验证基本属性不能为空") String name) {
