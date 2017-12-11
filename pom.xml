@@ -59,6 +59,7 @@
 	<modules>
 		<module>boot-features-properties</module>
 		<module>boot-features-simple</module>
+		<module>boot-features-groovy</module>
 		<module>boot-features-configuration</module>
 		<module>boot-features-banner</module>
 		<module>boot-features-event</module>
