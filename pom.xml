@@ -54,8 +54,7 @@
 			</plugin>
 		</plugins>
 	</build>
-	
-	
+
 	<modules>
 		<module>boot-features-properties</module>
 		<module>boot-features-simple</module>
@@ -76,5 +75,6 @@
 		<module>boot-features-jersey</module>
         <module>boot-features-jackson</module>
 		<module>boot-features-gorm</module>
+		<module>boot-features-file</module>
 	</modules>
 </project>

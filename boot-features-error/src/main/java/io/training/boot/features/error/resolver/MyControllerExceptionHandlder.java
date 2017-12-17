@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
 import io.training.boot.features.error.web.StandardController;
@@ -16,6 +17,7 @@ public class MyControllerExceptionHandlder extends ResponseEntityExceptionHandle
 
 	@ExceptionHandler(RuntimeException.class)
 	@ResponseBody
+	@ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)// 可以指定特定异常状态码
 	ResponseEntity<?> handleControllerException(HttpServletRequest request, Throwable ex) {
 		HttpStatus status = getStatus(request);
 		return new ResponseEntity<>(new CustomErrorType(status.value(), ex.getMessage()), status);
