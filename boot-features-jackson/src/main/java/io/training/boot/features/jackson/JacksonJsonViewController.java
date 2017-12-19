@@ -32,6 +32,19 @@ public class JacksonJsonViewController {
         return result;
     }
 
+    @JsonView(View.Parent.class)
+    @GetMapping("/parent")
+    public List<User> getParent() {
+        List<User> result = get();
+        return result;
+    }
+
+    @JsonView(View.Child.class)
+    @GetMapping("/child")
+    public List<User> getChild() {
+        List<User> result = get();
+        return result;
+    }
     private List<User> get() {
         List<User> users = new ArrayList<>();
 
@@ -57,5 +70,14 @@ public class JacksonJsonViewController {
         return users;
     }
 
+    @JsonView(View.Basic.class)
+    @GetMapping("/nested")
+    public RespData<List<User>> nested() {
+        List<User> users = get();
+        RespData result = new RespData();
+        result.setCode("1");
+        result.setResult(users);
+        return result;
+    }
 
 }

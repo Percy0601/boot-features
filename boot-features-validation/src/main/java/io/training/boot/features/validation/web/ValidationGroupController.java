@@ -6,6 +6,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
@@ -24,6 +25,27 @@ public class ValidationGroupController {
     public String validBasic(@NotNull(message = "验证基本属性不能为空") String name) {
         log.info("验证基本属性不能为空, name:{}", name);
         return "Hello: " + name;
+    }
+
+    @GetMapping("/basic-binding-result")
+    public String validBindingResult(@NotNull(message = "验证基本属性不能为空") String name, BindingResult result) {
+        log.info("验证基本属性不能为空, name:{}", name);
+        return "Hello: " + name;
+    }
+
+    @GetMapping("/basic-model-attribute")
+    public String validModelAttribute(User user, BindingResult result) {
+        log.info("验证基本属性不能为空, user:{}", user);
+
+        if (result.hasErrors()) {
+            List<ObjectError> list = result.getAllErrors();
+            for (ObjectError error : list) {
+                log.info("====={}---{}---{}", error.getCode(), error.getArguments(), error.getDefaultMessage());
+            }
+            return "验证出错";
+        }
+
+        return "Hello: " + user;
     }
 
     /**
@@ -56,8 +78,15 @@ public class ValidationGroupController {
      * @return
      */
     @GetMapping("/update")
-    public String validUpdate(@Validated(value = UpdateGroup.class) User user) {
+    public String validUpdate(@Validated(value = UpdateGroup.class) User user, BindingResult result) {
         log.info("验证自定义类：更新类");
+        if (result.hasErrors()) {
+            List<ObjectError> list = result.getAllErrors();
+            for (ObjectError error : list) {
+                log.info("====={}---{}---{}", error.getCode(), error.getArguments(), error.getDefaultMessage());
+            }
+            return "验证出错";
+        }
         return "验证自定义类：更新类";
     }
 

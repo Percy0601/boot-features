@@ -21,4 +21,9 @@ public class User {
     @JsonView(View.Basic.class)
     private String address;
 
+    @JsonView(View.Parent.class)
+    public String parentId;
+
+    @JsonView(View.Child.class)
+    public String child;
 }

@@ -1,6 +1,9 @@
 package io.training.boot.features.jackson;
 
 public class View {
-    interface Basic {}
-    interface Secret{}
+    public interface Basic {}
+    public enum Secret{}
+
+    public interface Parent{}
+    public interface Child extends Parent{}
 }
