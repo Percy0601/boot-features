@@ -20,7 +20,7 @@ import lombok.extern.slf4j.Slf4j;
 @RestController
 public class ValidationController {
 
-	@GetMapping
+	@GetMapping("/valid-bean")
 	public String valid(@Valid ValidBean bean, BindingResult result) {
 
 		if (result.hasErrors()) {
@@ -32,7 +32,7 @@ public class ValidationController {
 		return "Hello:" + bean.getName();
 	}
 
-	@GetMapping("custom")
+	@GetMapping("/custom-properties")
 	public String custom(@Valid SampleProperties bean) {
 		return "验证自定义的Validator";
 	}
