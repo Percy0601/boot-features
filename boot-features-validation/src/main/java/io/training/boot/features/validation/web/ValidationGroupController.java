@@ -5,9 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -34,13 +32,13 @@ public class ValidationGroupController {
     }
 
     @GetMapping("/basic-model-attribute")
-    public String validModelAttribute(User user, BindingResult result) {
+    public String validModelAttribute(@Validated(value = CreateGroup.class) User user, BindingResult result) {
         log.info("验证基本属性不能为空, user:{}", user);
 
         if (result.hasErrors()) {
             List<ObjectError> list = result.getAllErrors();
             for (ObjectError error : list) {
-                log.info("====={}---{}---{}", error.getCode(), error.getArguments(), error.getDefaultMessage());
+                log.info("ModelAttribute====={}---{}---{}", error.getCode(), error.getArguments(), error.getDefaultMessage());
             }
             return "验证出错";
         }
@@ -77,8 +75,8 @@ public class ValidationGroupController {
      * @param user
      * @return
      */
-    @GetMapping("/update")
-    public String validUpdate(@Validated(value = UpdateGroup.class) User user, BindingResult result) {
+    @PostMapping("/update")
+    public String validUpdate(@Validated(value = UpdateGroup.class) @RequestBody User user, BindingResult result) {
         log.info("验证自定义类：更新类");
         if (result.hasErrors()) {
             List<ObjectError> list = result.getAllErrors();
