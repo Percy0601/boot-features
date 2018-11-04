@@ -15,23 +15,15 @@ import spock.lang.Specification
 @ActiveProfiles("test")
 class SomeServiceSpec extends Specification{
     private Logger log = LoggerFactory.getLogger(this.getClass());
-
     @Autowired
-    SomeService someService;
-
-
+    SomeService someService
 
     def "test autowired"() {
         when:
-        String result = someService.handle("123");
-        log.info("==============={}", result);
+        String result = someService.handle("123")
+        log.info("==============={}", result)
         then:
-        someService != null;
-
+        someService != null
     }
-
-
-
-
 
 }
