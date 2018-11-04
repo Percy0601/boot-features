@@ -17,7 +17,7 @@ public class FeatureService {
     }
 
     public User findOne(Integer id) {
-        log.info("=============={}", (null == userRepo));
+        log.info("============== (null == userRepo): {}", (null == userRepo));
         return userRepo.get(id);
     }
 
