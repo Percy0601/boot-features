@@ -9,10 +9,14 @@ import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.test.context.ActiveProfiles
 import org.springframework.test.context.ContextConfiguration
 import spock.lang.Specification
+import spock.lang.Subject
+import spock.lang.Title
 
 @ContextConfiguration(classes = BootTestApplication)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 @ActiveProfiles("test")
+@Title("业务测试")
+@Subject(SomeService)
 class SomeServiceSpec extends Specification{
     private Logger log = LoggerFactory.getLogger(this.getClass());
     @Autowired
