@@ -4,12 +4,9 @@ import io.training.boot.features.test.FeatureService
 import io.training.boot.features.test.User
 import io.training.boot.features.test.UserRepo
 import org.slf4j.Logger
-import spock.lang.Narrative
-
-import org.slf4j.Logger
 import org.slf4j.LoggerFactory
+import spock.lang.Narrative
 import spock.lang.Specification
-import spock.lang.Stepwise
 import spock.lang.Subject
 import spock.lang.Title
 
