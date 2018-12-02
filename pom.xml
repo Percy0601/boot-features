@@ -48,8 +48,6 @@
 
 	<dependencyManagement>
 		<dependencies>
-
-
 			<dependency>
 				<groupId>org.spockframework</groupId>
 				<artifactId>spock-core</artifactId>
@@ -99,5 +97,6 @@
         <module>boot-features-jackson</module>
 		<module>boot-features-gorm</module>
 		<module>boot-features-file</module>
+		<module>boot-features-webflux</module>
 	</modules>
 </project>
