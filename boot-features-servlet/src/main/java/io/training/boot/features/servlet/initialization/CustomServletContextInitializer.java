@@ -2,10 +2,8 @@ package io.training.boot.features.servlet.initialization;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
-
-import org.springframework.boot.web.support.SpringBootServletInitializer;
-
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 @Slf4j
 public class CustomServletContextInitializer extends SpringBootServletInitializer {
