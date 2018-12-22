@@ -15,7 +15,6 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <start-class>io.training.boot.features.starter.BootFeaturesStarterApplication</start-class>
     </properties>
 
     <dependencies>

@@ -64,17 +64,6 @@
 
 	</dependencyManagement>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-					<fork>true</fork>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
 
 	<modules>
 		<module>boot-features-properties</module>
@@ -98,5 +87,7 @@
 		<module>boot-features-gorm</module>
 		<module>boot-features-file</module>
 		<module>boot-features-webflux</module>
+		<module>boot-features-starter</module>
+		<module>boot-features-starter-used</module>
 	</modules>
 </project>

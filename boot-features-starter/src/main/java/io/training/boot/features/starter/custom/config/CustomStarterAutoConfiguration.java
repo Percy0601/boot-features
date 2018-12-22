@@ -22,6 +22,7 @@ public class CustomStarterAutoConfiguration {
     @ConditionalOnMissingBean(CustomService.class)  // 当容器中没有指定Bean的情况下，自动配置PersonService类
     public CustomService customService(){
         CustomService customService = new CustomService(properties);
+        customService.custom();
         return customService;
     }
 

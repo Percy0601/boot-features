@@ -2,36 +2,29 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
-    <artifactId>boot-features-webflux</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <packaging>jar</packaging>
-
-    <name>boot-features-webflux</name>
-    <description>Demo project for Spring Boot</description>
-
     <parent>
         <groupId>io.training</groupId>
         <artifactId>boot-features</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
+    <artifactId>boot-features-starter-used</artifactId>
+    <packaging>jar</packaging>
+    <name>boot-features-starter-used</name>
+    <description>Demo project for Spring Boot</description>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <start-class>io.training.boot.features.webflux.BootFeaturesWebfluxApplication</start-class>
+        <start-class>io.training.boot.features.starter.BootFeaturesStarterApplication</start-class>
     </properties>
 
     <dependencies>
+
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-webflux</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>io.projectreactor</groupId>
-            <artifactId>reactor-test</artifactId>
-            <scope>test</scope>
+            <groupId>io.training</groupId>
+            <artifactId>boot-features-starter</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
-
 
 </project>
