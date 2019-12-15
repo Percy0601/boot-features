@@ -20,6 +20,7 @@ import static org.junit.jupiter.api.DynamicTest.dynamicTest;
 /**
  * 由于mvn test无法测试到@TestFactory
  * <pre>
+ *     切换目录：cd boot-features-junit5
  *     mvn test -Dtest=io.training.boot.features.junit5.test.Junit5TestFactory#*
  * </pre>
  *
