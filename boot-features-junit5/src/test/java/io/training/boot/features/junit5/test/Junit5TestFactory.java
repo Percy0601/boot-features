@@ -5,7 +5,6 @@ import io.training.boot.features.junit5.SomeService;
 import io.training.boot.features.junit5.User;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.DynamicTest;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -18,6 +17,16 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.DynamicTest.dynamicTest;
 
+/**
+ * 由于mvn test无法测试到@TestFactory
+ * <pre>
+ *     mvn test -Dtest=io.training.boot.features.junit5.test.Junit5TestFactory#*
+ * </pre>
+ *
+ * 使用上述指令可以测试
+ *
+ *
+ */
 @Slf4j
 @SpringBootTest
 public class Junit5TestFactory {
